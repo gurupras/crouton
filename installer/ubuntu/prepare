@@ -34,6 +34,7 @@ install_dist() {
         pkgsasdeps="`list_uninstalled_dist '' $pkgs`"
     fi
     apt-get -y $params install $pkgs `list_uninstalled_dist - "$@"`
+    apt-get -y $params install vim screen git gedit gcc make openssh-server openssh-client firefox libncurses5-dev
     if [ -n "$pkgsasdeps" ]; then
         apt-mark auto $pkgsasdeps
     fi
