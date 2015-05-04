@@ -9,6 +9,7 @@
 # from $RELEASE), $ARCH, and $MIRROR.
 
 # Grab the latest release of debootstrap
+echo 'You are running script from gurupras@buffalo.edu'
 echo 'Downloading latest debootstrap...' 1>&2
 d='http://anonscm.debian.org/gitweb/?p=d-i/debootstrap.git;a=snapshot;h=HEAD;sf=tgz'
 if ! wget -O- --no-verbose --timeout=60 -t2 "$d"  \
